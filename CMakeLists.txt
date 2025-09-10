@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_STANDARD 11      )
+project(cmakeTestPlan)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+aux_source_directory(. SRC_LIST)
+add_executable(cmakeTestPlan ${SRC_LIST})

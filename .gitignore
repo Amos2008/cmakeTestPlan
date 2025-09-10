@@ -1,3 +1,8 @@
+# fold
+/bin/
+# build
+/build/
+
 # Prerequisites
 *.d
 
