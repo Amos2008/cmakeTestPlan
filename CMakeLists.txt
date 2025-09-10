@@ -20,7 +20,9 @@ target_include_directories(common PUBLIC
 ${PROJECT_SOURCE_DIR}/include
 )
 
-
+# 生成可执行文件
 add_executable(cmakeTestPlan planningMain.cpp)
 target_include_directories(cmakeTestPlan PRIVATE ${PROJECT_SOURCE_DIR}/include)
+
+# 链接动态库
 target_link_libraries(cmakeTestPlan PRIVATE common)
