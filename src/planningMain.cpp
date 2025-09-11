@@ -1,5 +1,6 @@
 #include<iostream>
 #include"process.h"
+#include"showResult.h"
 
 int main()
 {
@@ -7,5 +8,8 @@ int main()
     Process my_process;
     my_process.planProcess();
     std::cout<<"Main function completed!"<<std::endl;
+
+    ShowResult showResult;
+    showResult.drawResult();
     return 0;
 };

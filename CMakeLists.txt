@@ -25,9 +25,18 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
 set(process_dir ${CMAKE_SOURCE_DIR}/src/process)
 set(pnc_map_dir ${CMAKE_SOURCE_DIR}/src/pncMap)
+set(show_result_dir ${CMAKE_SOURCE_DIR}/src/showResult)
 
 
 
+#其它设置
+# set(ONNXRUNTIME_DIR "/home/dell/test/lib/onnxruntime-linux-x64-1.12.1") 
+# include_directories("${ONNXRUNTIME_DIR}/include")
+
+
+
+set(easyx_dir "D:/code/easyx4mingw_25.9.10")
+# include_directories("${easyx_dir}/include")
 
 #添加子目录
 add_subdirectory(src)
