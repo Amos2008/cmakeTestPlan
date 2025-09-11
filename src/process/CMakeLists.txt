@@ -12,3 +12,4 @@ ${pnc_map_dir}
 target_link_libraries(${PROJECT_NAME} PUBLIC
 pncMap)
 
+target_link_libraries(${PROJECT_NAME} PRIVATE  Eigen3::Eigen)

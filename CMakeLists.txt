@@ -27,16 +27,26 @@ set(process_dir ${CMAKE_SOURCE_DIR}/src/process)
 set(pnc_map_dir ${CMAKE_SOURCE_DIR}/src/pncMap)
 set(show_result_dir ${CMAKE_SOURCE_DIR}/src/showResult)
 
-
+#第三方动态库
+# set(Eigen_dir "D:/code/Eigen")
+find_package(Eigen3 3.3 REQUIRED NO_MODULE)
+list(APPEND CMAKE_MODULE_PATH "${Eigen3_DIR}")
+message("CMAKE_MODULE_PATH=${CMAKE_MODULE_PATH}")
+message(STATUS "Found Eigen version: ${EIGEN3_VERSION}")
 
 #其它设置
 # set(ONNXRUNTIME_DIR "/home/dell/test/lib/onnxruntime-linux-x64-1.12.1") 
 # include_directories("${ONNXRUNTIME_DIR}/include")
+# find_package(OpenCV 4 REQUIRED )
+# message(STATUS "Found OpenCV version: ${OpenCV_VERSION}")
 
 
-
+#静态库第三方
 set(easyx_dir "D:/code/easyx4mingw_25.9.10")
 # include_directories("${easyx_dir}/include")
+
+
+
 
 #添加子目录
 add_subdirectory(src)
