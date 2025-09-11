@@ -10,6 +10,8 @@ project(
 )
         
 set(CMAKE_CXX_STANDARD 11)
+
+enable_testing()
     
 #变量设置
 # set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
@@ -34,6 +36,11 @@ list(APPEND CMAKE_MODULE_PATH "${Eigen3_DIR}")
 message("CMAKE_MODULE_PATH=${CMAKE_MODULE_PATH}")
 message(STATUS "Found Eigen version: ${EIGEN3_VERSION}")
 
+if(TARGET Eigen::Eigen)
+    message(STATUS "Eigen3::Eigen is found")
+endif()
+
+
 #其它设置
 # set(ONNXRUNTIME_DIR "/home/dell/test/lib/onnxruntime-linux-x64-1.12.1") 
 # include_directories("${ONNXRUNTIME_DIR}/include")
@@ -51,6 +58,7 @@ set(easyx_dir "D:/code/easyx4mingw_25.9.10")
 #添加子目录
 add_subdirectory(src)
 
+add_subdirectory(test/mapTest)
 
 # cmake_minimum_required(VERSION 3.10)
 # set(CMAKE_CXX_STANDARD 11)
